@@ -115,7 +115,6 @@ function pullQuestions() {
         url:`https://opentdb.com/api.php?amount=5&type=multiple&token=${APIToken}`,
         responseType:"application/json",
         success:function(res) {
-            console.log(res);
             questions = res.results;
             return GrabQuestion();
         },
