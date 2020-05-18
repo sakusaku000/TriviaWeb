@@ -1,0 +1,121 @@
+body {
+    -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; /* No Select */
+    background-color:#A8C3D9 !important;
+    font-family:'Manjari', sans-serif;
+    transition-duration:1s;
+    overflow:hidden;
+}
+
+.CorrAnsBG {
+    background-color:#7dfd7d !important;
+}
+.IncorrAnsBG {
+    background-color:#fd7d7d !important;
+}
+
+a {
+    color:#202529;
+}
+a:hover {
+    color:#202529; text-decoration:none;
+}
+
+.centered {
+    position:absolute; top:50%; left:50%; margin-right:-50%; transform:translate(-50%, -50%); text-align:center; /* Center content */
+}
+
+#load {
+    position:fixed; bottom:30px; left:30px;
+}
+
+/*--Buttons--*/
+/*Main*/
+.mainBtn {
+    display:inline-block;
+    background-color:#FFFFFF;
+    padding:5px 15px;
+    border-radius:7px;
+    font-size:1.2rem;
+    cursor:pointer;
+    transition-duration:0.2s;
+}
+.mainBtn span {
+    position:relative; top:2px;
+}
+.mainBtn:hover {
+    box-shadow:0px 0px 10px #0000007c;
+    transform:scale(1.02);
+}
+
+/*Answer*/
+.answerBtn {
+    display:inline-block;
+    width:380px;
+    background-color:white;
+    padding:5px 15px;
+    border-radius:7px;
+    font-size:1.2rem;
+    margin-top:5px; margin-bottom:5px; margin-left:50px; margin-right:50px;
+    cursor:pointer;
+    transition-duration:0.2s;
+}
+.answerBtn span {
+    position:relative; top:2px;
+}
+.answerBtn:hover {
+    box-shadow:0px 0px 10px #0000007c;
+    transform:scale(1.02);
+}
+
+.answerBtnA:hover {
+    background-color:#E94444 !important;
+    box-shadow:0px 0px 10px #E94444;
+}
+.answerBtnB:hover {
+    background-color:#46C839 !important;
+    box-shadow:0px 0px 10px #46C839;
+}
+.answerBtnC:hover {
+    background-color:#F5EA6E !important;
+    box-shadow:0px 0px 10px #F5EA6E;
+}
+.answerBtnD:hover {
+    background-color:#70ADE0 !important;
+    box-shadow:0px 0px 10px #70ADE0;
+}
+
+#appDisable {
+    position:fixed; height:100%; width:100%;
+}
+
+.CorrAns {
+    font-size:7rem; height:112px;
+    animation:CorrAnsAppear 0.5s ease; animation-fill-mode:forwards;
+}
+@keyframes CorrAnsAppear {
+    from {transform:scale(0.8); opacity:0;}
+    to {transform:scale(1); opacity:1;}
+}
+
+.IncorrAnsTxt {
+    margin-top:30px; font-size:1.5rem;
+    opacity:0;
+    animation:IncorrAnsTxt 0.5s 0.5s ease; animation-fill-mode:forwards;
+}
+@keyframes IncorrAnsTxt {
+    from {opacity:0; transform:translateY(10px);}
+    to {opacity:1; transform:translateY(0px);}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {  
+    .QuestionTitle {
+        font-size:1.5rem !important;
+        display:inline-block;
+        width:400px;
+    }
+    .QuestionCateDiff {
+        font-size:1rem !important;
+        display:inline-block;
+        width:400px;
+    }
+}

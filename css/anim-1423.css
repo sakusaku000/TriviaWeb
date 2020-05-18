@@ -1,0 +1,60 @@
+.appear {
+    animation:appear 0.5s ease; animation-fill-mode:forwards;
+}
+@keyframes appear {
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+
+.disappear {
+    animation:disappear 0.5s ease; animation-fill-mode:forwards;
+}
+@keyframes disappear {
+    from{opacity:1; transform:scale(1);}
+    to{opacity:0; transform:scale(0.8);}
+}
+
+.fadeout {
+    animation:fadeout 0.5s ease; animation-fill-mode:forwards;
+}
+@keyframes fadeout {
+    from{opacity:1;}
+    to{opacity:0;}
+}
+
+.blur {
+    animation:blur 1s ease; animation-fill-mode:forwards;
+}
+@keyframes blur {
+    from {filter:blur(0px);}
+    to {filter:blur(10px);}
+}
+
+.loadAppear {
+    animation:loadAppear 0.3s ease; animation-fill-mode:forwards;
+}
+@keyframes loadAppear {
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0px);}
+}
+.loadDisappear {
+    animation:loadDisappear 0.3s ease; animation-fill-mode:forwards;
+}
+@keyframes loadDisappear {
+    from{opacity:1; transform:translateY(0px);}
+    to{opacity:0; transform:translateY(10px);}
+}
+
+.timerBar {
+    height:5px; width:380px; margin-top:30px; display:inline-block;
+    background:linear-gradient(to right, #fc4343 50%, #212121 50%);
+    background-size:200% 100%;
+    animation:timerBar 10s linear; animation-fill-mode:forwards;
+}
+@keyframes timerBar {
+    from{background-position:right bottom}
+    to{background-position:left bottom}
+}
+.timerBarPause {
+    animation-play-state:paused;
+}
